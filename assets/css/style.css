@@ -16,7 +16,7 @@
 }
 
 .woosp__link {
-  display: block;
+  display: flex;
 }
 
 .woosp__icon {

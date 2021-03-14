@@ -189,7 +189,7 @@ class WooShareProduct
     }
 
     if ( $product_share_whatsapp ) {
-      $whatsapp_url_params = 'text=' . urlencode($product_title) . '%0A%0A' . urlencode($product_permalink);
+      $whatsapp_url_params = 'text=' . esc_html($product_title) . '%0A%0A' . urlencode($product_permalink);
       $whatsapp_url_share = 'https://api.whatsapp.com/send?' . $whatsapp_url_params;
 
       $product_share_markup .= '<span class="woosp__item"><a class="woosp__link" href="'. $whatsapp_url_share .'" target="__blank"><svg xmlns="http://www.w3.org/2000/svg" class="woosp__icon" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M18.38 5.63a8.97 8.97 0 00-14.1 10.81L3 21.08l4.75-1.25a8.97 8.97 0 0010.63-14.2zM12.04 19.4a7.45 7.45 0 01-3.8-1.04l-.27-.16-2.82.74.75-2.75-.17-.28a7.46 7.46 0 116.31 3.49zm4.08-5.58a35.7 35.7 0 00-1.53-.72c-.2-.08-.35-.11-.5.1-.15.23-.58.74-.71.89-.13.14-.26.16-.48.05-.23-.1-.95-.35-1.8-1.11a6.7 6.7 0 01-1.25-1.55c-.13-.23-.02-.35.1-.46.1-.1.22-.26.33-.39.11-.13.15-.22.23-.37.07-.15.03-.28-.02-.4-.06-.1-.5-1.21-.7-1.66-.17-.43-.36-.37-.5-.38h-.42c-.15 0-.4.05-.6.27-.2.23-.78.77-.78 1.87s.8 2.17.9 2.32c.12.14 1.59 2.4 3.84 3.38.53.23.94.36 1.27.47.54.17 1.03.14 1.41.09.43-.07 1.33-.54 1.51-1.07.19-.52.19-.97.13-1.06-.05-.1-.2-.15-.43-.27z" clip-rule="evenodd"/></svg></a></span>';
