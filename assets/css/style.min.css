@@ -1,0 +1,1 @@
+.woosp{display:flex;align-items:center;font-size:14px;margin:10px 0}.woosp__title{display:inline-flex;margin-right:4px}.woosp__item{display:inline-flex;padding:0 4px}.woosp__link{display:block}.woosp__icon{width:1em;height:1em;fill:#777777;transition:fill .2s ease-in-out}.woosp__link:hover .woosp__icon{fill:#000000}
