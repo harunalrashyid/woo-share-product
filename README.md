@@ -1,2 +1,2 @@
-# woo-share-product
-Add share social single product woocommerce
+# Woocommerce Share Product
+Add capabilities share social single product woocommerce
