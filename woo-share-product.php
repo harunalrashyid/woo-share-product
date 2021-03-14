@@ -15,6 +15,8 @@ if ( !defined('ABSPATH') ) {
   die('-1');
 }
 
+define('WOOSP_VERSION', '1.0.0');
+
 require_once( __DIR__ . '/includes/woo_share_product.php' );
 
 if ( class_exists('WooShareProduct') ) {
