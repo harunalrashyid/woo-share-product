@@ -21,6 +21,7 @@ class WooShareProduct
 
       add_filter( 'woocommerce_get_sections_products', array($this, 'woosp_admin_add_section') );
       add_filter( 'woocommerce_get_settings_products', array($this, 'woosp_admin_settings'), 10, 2 );
+      add_filter( 'plugin_action_links_'. WOOSP_PLUGIN_FILE, array($this, 'woosp_admin_link_setting'), 10, 5 );
 
       add_action( 'wp_enqueue_scripts', array($this, 'woosp_front_load_style') );
       add_action( 'woocommerce_single_product_summary', array($this, 'woosp_front_add_buttons'), 40 );
@@ -114,6 +115,13 @@ class WooShareProduct
     } else {
       return $settings;
     }
+  }
+
+  public function woosp_admin_link_setting( $links )
+  {
+    $links[] = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=products&section=wooshareproduct' ) . '">Settings</a>';
+
+    return $links;
   }
 
   public function woosp_admin_notice_woocommerce_not_active()
